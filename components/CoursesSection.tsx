@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Clock, Users, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 const courses = [
   {
@@ -73,7 +73,7 @@ const cardVariants = {
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 0.8, ease: [0.21, 1, 0.36, 1] } 
+    transition: { duration: 0.8, ease: "easeOut" }, 
   },
 };
 

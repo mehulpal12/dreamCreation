@@ -24,7 +24,7 @@ export default function StorySection() {
       transition: {
         delay: i * 0.2,
         duration: 0.8,
-        ease: [0.21, 1, 0.36, 1],
+        ease: "easeOut",
       },
     }),
   };

@@ -14,7 +14,7 @@ export default function InstructorsSection() {
       transition: {
         duration: 0.8,
         staggerChildren: 0.2,
-        ease: [0.22, 1, 0.36, 1],
+        ease: "easeOut",
       },
     },
   };
@@ -29,7 +29,7 @@ export default function InstructorsSection() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 

@@ -87,7 +87,7 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.25, 1, 0.5, 1], // Custom cubic-bezier for a high-end feel
+      ease: [0.25, 1, 0.5, 1] as [number, number, number, number], // Custom cubic-bezier for a high-end feel
     },
   },
 };

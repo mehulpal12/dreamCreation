@@ -1,7 +1,7 @@
 "use client";
 
 import { Play, Package, UsersRound, Award, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variant } from "framer-motion";
 
 type Feature = {
   title: string;
@@ -37,7 +37,7 @@ const features: Feature[] = [
 ];
 
 // Animation Variants
-const containerVariants = {
+const containerVariants: Variant = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -47,14 +47,14 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variant = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.7,
-      ease: [0.21, 1, 0.36, 1],
+      ease: "easeOut",
     },
   },
 };

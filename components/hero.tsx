@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { easeOut, motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function HeroSection() {
@@ -34,7 +34,7 @@ export default function HeroSection() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+      transition: { duration: 0.8, ease: "easeOut" }, 
     },
   };
 

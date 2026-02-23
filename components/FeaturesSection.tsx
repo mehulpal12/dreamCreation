@@ -77,7 +77,7 @@ export default function FeaturesSection() {
           >
             <motion.span 
               whileHover={{ scale: 1.05 }}
-              className="inline-block px-6 py-2 border border-[#BF5645] rounded-full text-[#BF5645] text-sm uppercase tracking-widest font-medium mb-6 cursor-default"
+              className="inline-block px-6 py-2 border  rounded-full font-sans text-sm uppercase tracking-widest font-semibold mb-6 cursor-default"
             >
               Why Choose Us
             </motion.span>
@@ -86,7 +86,7 @@ export default function FeaturesSection() {
               Everything You Need to Excel
             </h2>
 
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto font-sans text-black">
               Comprehensive education, premium materials, and lifetime community support
             </p>
           </motion.div>

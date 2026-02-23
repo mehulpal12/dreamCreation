@@ -113,9 +113,9 @@ export default function TestimonialsSection() {
               <motion.span 
                 animate={{ scale: [1, 1.4, 1] }}
                 transition={{ repeat: Infinity, duration: 3 }}
-                className="w-2 h-2 rounded-full bg-[#BF5645]" 
+                className="" 
               />
-              <span className="text-[#BF5645] text-sm uppercase tracking-widest font-medium">
+              <span className=" font-sans text-sm uppercase tracking-widest font-medium">
                 Testimonials
               </span>
             </div>
@@ -124,7 +124,7 @@ export default function TestimonialsSection() {
               What Our Students Say About Their Journey
             </h2>
 
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto font-sans">
               Real stories from calligraphers who transformed their skills with us
             </p>
           </motion.div>

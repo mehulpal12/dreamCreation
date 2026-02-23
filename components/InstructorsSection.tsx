@@ -46,7 +46,7 @@ export default function InstructorsSection() {
   return (
     <section
       id="instructors"
-      className="py-24 lg:py-32 bg-white dark:bg-gray-900 transition-colors duration-500 overflow-hidden"
+      className="py-24 lg:py-32 bg-white dark:bg-gray-900 transition-colors duration-500 overflow-hidden font-sans space-y-1.5"
     >
       <div className="px-6 sm:px-12 lg:px-24 xl:px-32">
         <div className="max-w-7xl mx-auto">
@@ -76,19 +76,20 @@ export default function InstructorsSection() {
 
               <motion.p 
                 variants={itemFade}
-                className="text-lg font-medium text-black dark:text-white mb-4 italic"
+                className="text-lg font-medium text-black dark:text-white mb-4 "
               >
                 The First Calligrapher of Saharanpur
               </motion.p>
 
               <motion.p 
                 variants={itemFade}
-                className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-8"
+                className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-8 tracking-wide"
               >
                 Shagun Khanna brings exceptional expertise in calligraphy,
                 engraving, and resin art. As Saharanpur&apos;s pioneering
                 calligrapher, she has dedicated her career to preserving
                 traditional techniques while embracing modern innovations.
+                Her specialized approach ensures assured handwriting improvement for every student, combining artistic excellence with proven teaching methodologies.
               </motion.p>
 
               <div className="space-y-4">

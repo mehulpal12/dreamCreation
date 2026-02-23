@@ -93,9 +93,9 @@ export default function ShowcaseSection() {
               <motion.span 
                 animate={{ scale: [1, 1.5, 1] }}
                 transition={{ repeat: Infinity, duration: 2 }}
-                className="w-2 h-2 rounded-full bg-orange-700"
+                className=""
               />
-              <span className="text-orange-700 dark:text-orange-500 text-sm uppercase tracking-widest font-medium">
+              <span className="text-sm uppercase tracking-widest font-medium font-sans">
                 Student Showcase
               </span>
             </div>
@@ -104,7 +104,7 @@ export default function ShowcaseSection() {
               Beautiful Work from Our Community
             </h2>
 
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-black dark:text-gray-400 text-lg max-w-2xl mx-auto font-sans">
               See the transformation from beginner to confident calligrapher
               through our students&apos; incredible creations
             </p>
@@ -183,7 +183,7 @@ export default function ShowcaseSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="/gallery"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 px-10 py-4 font-sans tracking-wide bg-black dark:bg-white text-white dark:text-black rounded-full font-medium transition-all shadow-lg hover:shadow-xl"
             >
               View Full Gallery
               <ArrowRight className="w-5 h-5" />

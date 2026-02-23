@@ -34,7 +34,8 @@ const lineVariants: Variants = {
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-16 lg:py-20 overflow-hidden font-sans">
+    // Updated background: white for light theme, gray-950 for dark
+    <footer className="bg-white dark:bg-[#0a0a0a] py-16 lg:py-20 overflow-hidden font-sans border-t border-gray-100 dark:border-white/5 transition-colors duration-500">
       <div className="px-6 sm:px-12 lg:px-24 xl:px-32">
         <motion.div 
           className="max-w-7xl mx-auto"
@@ -54,14 +55,14 @@ export default function Footer() {
                   transition={{ duration: 0.8 }}
                   src="https://static.readdy.ai/image/372f773fe6a0bed8962b0dcba62791f3/b1a51097efcd4ad23c6e69c066734712.jpeg"
                   alt="Dreams Creation"
-                  className="w-14 h-14 rounded-full object-cover border border-white/10"
+                  className="w-14 h-14 rounded-full object-cover border border-gray-200 dark:border-white/10"
                 />
-                <span className="font-serif text-3xl text-[#FAF9F6]">
+                <span className="font-serif text-3xl text-gray-900 dark:text-[#FAF9F6]">
                   Dreams Creation
                 </span>
               </div>
 
-              <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-md">
+              <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-md">
                 Empowering aspiring calligraphers worldwide with premium education,
                 professional materials, and a supportive community. Join us in 
                 preserving the timeless art of beautiful writing.
@@ -69,13 +70,13 @@ export default function Footer() {
 
               {/* Newsletter */}
               <div className="max-w-sm">
-                <p className="text-[#FAF9F6] font-medium mb-4">Stay Inspired</p>
+                <p className="text-gray-900 dark:text-[#FAF9F6] font-medium mb-4">Stay Inspired</p>
                 <form className="flex flex-col gap-4">
                   <div className="relative group">
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full px-0 py-3 bg-transparent border-b border-white/20 text-[#FAF9F6] placeholder-gray-500 focus:outline-none transition-colors"
+                      className="w-full px-0 py-3 bg-transparent border-b border-gray-300 dark:border-white/20 text-gray-900 dark:text-[#FAF9F6] placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none transition-colors"
                     />
                     <motion.div 
                       className="absolute bottom-0 left-0 h-[1px] bg-[#BF5645] w-full origin-left"
@@ -85,9 +86,9 @@ export default function Footer() {
                   </div>
 
                   <motion.button
-                    whileHover={{ scale: 1.02, backgroundColor: "#BF5645", borderColor: "#BF5645" }}
+                    whileHover={{ scale: 1.02, backgroundColor: "#BF5645", borderColor: "#BF5645", color: "#fff" }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto px-8 py-3 border border-[#FAF9F6] text-[#FAF9F6] rounded-lg transition-all flex items-center justify-center gap-2 group"
+                    className="w-full sm:w-auto px-8 py-3 border border-gray-900 dark:border-[#FAF9F6] text-gray-900 dark:text-[#FAF9F6] rounded-lg transition-all flex items-center justify-center gap-2 group"
                   >
                     Subscribe
                     <motion.div
@@ -138,10 +139,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Bottom Bar */}
+          {/* Bottom Bar Separator */}
           <motion.div 
             variants={lineVariants}
-            className="border-t border-white/10 pt-8 origin-left"
+            className="border-t border-gray-200 dark:border-white/10 pt-8 origin-left"
           />
           
           <motion.div 
@@ -155,7 +156,7 @@ export default function Footer() {
             <motion.a
               whileHover={{ color: "#BF5645" }}
               href="#"
-              className="text-gray-500 text-sm transition-colors"
+              className="text-gray-500 hover:text-gray-800 dark:hover:text-[#FAF9F6] text-sm transition-colors"
             >
               Privacy Policy & Terms
             </motion.a>
@@ -167,11 +168,11 @@ export default function Footer() {
   );
 }
 
-
 function FooterColumn({ title, links }: { title: string; links: string[] }) {
   return (
     <motion.div variants={itemVariants}>
-      <h4 className="text-[#FAF9F6] font-medium uppercase tracking-widest text-xs mb-6">
+      {/* Title changes from deep gray to off-white */}
+      <h4 className="text-gray-900 dark:text-[#FAF9F6] font-medium uppercase tracking-widest text-xs mb-6">
         {title}
       </h4>
       <ul className="space-y-4">
@@ -179,8 +180,10 @@ function FooterColumn({ title, links }: { title: string; links: string[] }) {
           <li key={index}>
             <motion.a
               href="#"
+              // On hover, we slide right and change to the terracotta brand color
               whileHover={{ x: 5, color: "#BF5645" }}
-              className="text-gray-400 transition-colors text-sm inline-block"
+              // Base: darker gray for light mode, lighter gray for dark mode
+              className="text-gray-600 dark:text-gray-400 transition-colors text-sm inline-block"
             >
               {link}
             </motion.a>

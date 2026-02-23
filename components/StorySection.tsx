@@ -128,7 +128,7 @@ export default function StorySection() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <span className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-[0.3em] font-semibold">
+            <span className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-[0.3em] font-semibold font-sans">
               Our Story & Mission
             </span>
           </motion.div>
@@ -142,11 +142,9 @@ export default function StorySection() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white leading-[1.4] tracking-tight">
-              Dreams Creation was founded to preserve
-              the <span className="text-[#BF5645] italic">timeless art</span> of calligraphy while making it accessible to
-              modern learners.
-            </h2>
+            <h4 className="font-serif text-xl sm:text-4xl lg:text-4xl text-gray-900 dark:text-white leading-[1.4] ">
+             Dreams Creation was founded with a singular vision: to preserve the timeless art of calligraphy while making it accessible to modern learners. We believe that the meditative practice of beautiful writing has the power to transform not just your handwriting, but your entire creative perspective.
+            </h4>
           </motion.div>
 
           {/* Secondary Paragraph */}
@@ -157,7 +155,7 @@ export default function StorySection() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <p className="text-gray-600 dark:text-gray-400 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto font-light">
+            <p className="text-black dark:text-gray-400 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto font-light font-sans">
               Every stroke tells a story, and every student who joins us becomes
               part of a tradition that spans centuries. We believe the meditative practice of
               beautiful writing transforms your entire creative perspective.

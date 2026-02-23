@@ -94,7 +94,7 @@ export default function CoursesSection() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="inline-block text-gray-600 dark:text-gray-400 text-sm uppercase tracking-widest font-medium mb-4">
+            <span className="inline-block font-sans text-gray-600 dark:text-gray-400 text-sm uppercase tracking-widest font-medium mb-4">
               Our Programs
             </span>
 
@@ -102,7 +102,7 @@ export default function CoursesSection() {
               Signature Courses
             </h2>
 
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-xl">
+            <p className="text-gray-600 font-sans dark:text-gray-400 text-lg max-w-xl">
               Comprehensive calligraphy education tailored to your journey,
               from first strokes to mastery
             </p>

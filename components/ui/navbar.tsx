@@ -3,9 +3,19 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Sun, Menu, X } from "lucide-react"
+import { Sun, Menu, X, Moon } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
+import { useTheme } from "next-themes"
+
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 const navLinks = [
   { name: "Courses", href: "#courses" },
@@ -18,6 +28,12 @@ const navLinks = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+   const { theme, setTheme } = useTheme();
+
+
+
+  const isDark = theme === "dark";
+  
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -76,13 +92,31 @@ export const Navbar = () => {
             </div>
 
             <div className="flex items-center gap-4">
-              <motion.button
-                whileHover={{ rotate: 180 }}
-                transition={{ duration: 0.5 }}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/20"
-              >
-                <Sun className="w-5 h-5 text-white" />
-              </motion.button>
+             <motion.button
+      // Toggle logic
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      // Your existing styles
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white/20 overflow-hidden relative"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      aria-label="Toggle theme"
+    >
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={isDark ? "moon" : "sun"}
+          initial={{ y: 20, opacity: 0, rotate: -90 }}
+          animate={{ y: 0, opacity: 1, rotate: 0 }}
+          exit={{ y: -20, opacity: 0, rotate: 90 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          {isDark ? (
+            <Moon className="w-5 h-5 text-white" />
+          ) : (
+            <Sun className="w-5 h-5 text-white" />
+          )}
+        </motion.div>
+      </AnimatePresence>
+    </motion.button>
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link

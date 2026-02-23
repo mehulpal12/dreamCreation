@@ -1,19 +1,19 @@
 "use client";
 
-import { easeOut, motion } from "framer-motion";
+import { easeOut, motion, Variant } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 // Animation Variants
-const fadeInScale = {
+const fadeInScale: Variant = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: easeOut },
   },
 };
 
-const staggerContainer = {
+const staggerContainer: Variant = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -21,12 +21,12 @@ const staggerContainer = {
   },
 };
 
-const slideUp = {
+const slideUp: Variant = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.8, ease: easeOut },
   },
 };
 

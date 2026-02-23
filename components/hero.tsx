@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { easeOut, motion, useScroll, useTransform } from "framer-motion";
+import { easeOut, motion, useScroll, useTransform, Variants } from "framer-motion";
 import { useRef } from "react";
 
 export default function HeroSection() {
@@ -18,7 +18,7 @@ export default function HeroSection() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   // Animation variants for staggered text reveal
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -29,7 +29,7 @@ export default function HeroSection() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 

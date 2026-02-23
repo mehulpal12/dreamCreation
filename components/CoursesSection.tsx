@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Clock, Users, ArrowRight } from "lucide-react";
-import { easeOut, motion } from "framer-motion";
+import { easeOut, motion, Variants } from "framer-motion";
 
 const courses = [
   {
@@ -58,7 +58,7 @@ const courses = [
 ];
 
 // Animation Variants
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -68,7 +68,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 

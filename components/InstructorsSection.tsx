@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { Users } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function InstructorsSection() {
   // Animation Variants
-  const textContainer = {
+  const textContainer: Variants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
@@ -19,12 +19,12 @@ export default function InstructorsSection() {
     },
   };
 
-  const itemFade = {
+  const itemFade: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const imageContainer = {
+  const imageContainer: Variants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -33,7 +33,7 @@ export default function InstructorsSection() {
     },
   };
 
-  const statsCard = {
+  const statsCard: Variants = {
     hidden: { opacity: 0, x: -30, y: 30 },
     visible: {
       opacity: 1,

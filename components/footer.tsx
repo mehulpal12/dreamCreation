@@ -24,7 +24,7 @@ const itemVariants: Variants = {
   },
 };
 
-const lineVariants = {
+const lineVariants: Variants = {
   hidden: { scaleX: 0 },
   visible: { 
     scaleX: 1, 

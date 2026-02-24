@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Clock, Users, ArrowRight } from "lucide-react";
+import { Clock, Users, ArrowRight,  } from "lucide-react";
 import { easeOut, motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const courses = [
   {
@@ -169,7 +170,10 @@ export default function CoursesSection() {
                     </p>
 
                     <div className="inline-flex items-center gap-2 text-black dark:text-white font-medium text-sm transition-all group-hover:gap-3">
+              <Link href={`/product/${course.id}`}>
+                      
                       Learn More
+                      </Link>
                       <motion.div
                         animate={{ x: [0, 5, 0] }}
                         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
@@ -181,6 +185,7 @@ export default function CoursesSection() {
 
                 </div>
               </motion.div>
+              
             ))}
           </motion.div>
 

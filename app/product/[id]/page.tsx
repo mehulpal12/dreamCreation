@@ -54,10 +54,13 @@ export default async function CoursePage({
         />
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+       <button  className="absolute top-4 left-4 z-10"> 
         <Link href="/" className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-black text-sm font-medium rounded-full mt-10 ms-10">
              <ArrowLeft className="w-4 h-4 inline-block me-1" />
              Back to Home
             </Link>
+
+       </button>
 
         <div className="absolute inset-0 flex items-center justify-center font-sans">
           <div className="px-6 sm:px-12 lg:px-24 xl:px-32 w-full max-w-7xl mx-auto">

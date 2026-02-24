@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     name: "Jennifer Walsh",
     role: "Wedding Calligraphy Graduate",
     image:
-      "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20young%20woman%20with%20warm%20smile&width=100&height=100",
+      "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Finally Mastered Flourishing",
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     name: "Robert Martinez",
     role: "Traditional Copperplate Graduate",
     image:
-      "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20middle-aged%20man%20with%20kind%20expression&width=100&height=100",
+      "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "From Complete Beginner to Confident",
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     name: "Amanda Foster",
     role: "Beginner Calligraphy Graduate",
     image:
-      "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20young%20woman%20with%20curly%20hair&width=100&height=100",
+      "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Exceptional Quality Instruction",
@@ -47,7 +47,7 @@ const testimonials: Testimonial[] = [
     name: "Thomas Wright",
     role: "Brush Lettering Graduate",
     image:
-      "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20older%20gentleman%20with%20gray%20hair&width=100&height=100",
+      "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Best Investment in My Creative Journey",
@@ -56,7 +56,7 @@ const testimonials: Testimonial[] = [
     name: "Michelle Lee",
     role: "Modern Script Graduate",
     image:
-      "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20asian%20woman%20with%20long%20black%20hair&width=100&height=100",
+      "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Opened New Career Opportunities",
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
     name: "Daniel Brooks",
     role: "Business Calligraphy Graduate",
     image:
-      "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20young%20man%20with%20beard&width=100&height=100",
+      "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 

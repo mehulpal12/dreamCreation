@@ -8,12 +8,16 @@ import FeaturesSection from "@/components/FeaturesSection";
 import StorySection from "@/components/StorySection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/footer";
+import IndexPage from "./test/page";
+import { course } from "@/sanity/schemaTypes/course";
 export default function Home() {
   return (
     <div className="">
+
       <Navbar/>
       <Hero/>
-      <CoursesSection/>
+      <CoursesSection courses={course || []}/>
+      <IndexPage/>
       <InstructorsSection/>
       <ShowcaseSection/>
       <TestimonialsSection/>

@@ -75,7 +75,7 @@ export default async function CoursePage({
             </h1>
 
             <p className="text-white text-lg sm:text-xl max-w-2xl">
-              {course?.tagLine}
+              {course?.TagLine}
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default async function CoursePage({
             </div>
 
             <div className="text-3xl font-bold text-black dark:text-white font-sans">
-              ₹{course?.price}
+              ₹{course?.Price}
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default async function CoursePage({
               <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 transition-colors duration-300">
                 <div className="text-center mb-6">
                   <div className="text-4xl font-bold text-black dark:text-white mb-2">
-                    ₹{course?.price}
+                    ₹{course?.Price}
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
                     One-time payment

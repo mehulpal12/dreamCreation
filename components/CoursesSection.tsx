@@ -4,61 +4,64 @@ import Image from "next/image";
 import { Clock, Users, ArrowRight,  } from "lucide-react";
 import { easeOut, motion, Variants } from "framer-motion";
 import Link from "next/link";
+import { useEffect } from "react";
 
-const courses = [
-  {
-    id: 1,
-    title: "Beginner Calligraphy",
-    level: "Beginner",
-    duration: "6 Weeks",
-    image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
-    description: "Start your journey with foundational strokes and letterforms. Perfect for complete beginners.",
-  },
-  {
-    id: 2,
-    title: "Modern Script",
-    level: "Intermediate",
-    duration: "8 Weeks",
-    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
-    description: "Master contemporary calligraphy styles with fluid, expressive letterforms and compositions.",
-  },
-  {
-    id: 3,
-    title: "Traditional Copperplate",
-    level: "Advanced",
-    duration: "12 Weeks",
-        image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
+// const courses = [
 
-    description: "Learn the elegant, time-honored Copperplate script with precise oblique pen techniques.",
-  },
-  {
-    id: 4,
-    title: "Beginner Calligraphy",
-    level: "Beginner",
-    duration: "6 Weeks",
-    image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
-    description: "Start your journey with foundational strokes and letterforms. Perfect for complete beginners.",
-  },
-  {
-    id: 5,
-    title: "Modern Script",
-    level: "Intermediate",
-    duration: "8 Weeks",
-    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
-    description: "Master contemporary calligraphy styles with fluid, expressive letterforms and compositions.",
-  },
-  {
-    id: 6,
-    title: "Traditional Copperplate",
-    level: "Advanced",
-    duration: "12 Weeks",
-        image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
+//   {
+//     id: 1,
+//     title: "Beginner Calligraphy",
+//     level: "Beginner",
+//     duration: "6 Weeks",
+//     image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
+//     description: "Start your journey with foundational strokes and letterforms. Perfect for complete beginners.",
+//   },
+//   {
+//     id: 2,
+//     title: "Modern Script",
+//     level: "Intermediate",
+//     duration: "8 Weeks",
+//     image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
+//     description: "Master contemporary calligraphy styles with fluid, expressive letterforms and compositions.",
+//   },
+//   {
+//     id: 3,
+//     title: "Traditional Copperplate",
+//     level: "Advanced",
+//     duration: "12 Weeks",
+//         image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
 
-    description: "Learn the elegant, time-honored Copperplate script with precise oblique pen techniques.",
-  },
-];
+//     description: "Learn the elegant, time-honored Copperplate script with precise oblique pen techniques.",
+//   },
+//   {
+//     id: 4,
+//     title: "Beginner Calligraphy",
+//     level: "Beginner",
+//     duration: "6 Weeks",
+//     image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
+//     description: "Start your journey with foundational strokes and letterforms. Perfect for complete beginners.",
+//   },
+//   {
+//     id: 5,
+//     title: "Modern Script",
+//     level: "Intermediate",
+//     duration: "8 Weeks",
+//     image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
+//     description: "Master contemporary calligraphy styles with fluid, expressive letterforms and compositions.",
+//   },
+//   {
+//     id: 6,
+//     title: "Traditional Copperplate",
+//     level: "Advanced",
+//     duration: "12 Weeks",
+//         image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
+
+//     description: "Learn the elegant, time-honored Copperplate script with precise oblique pen techniques.",
+//   },
+// ];
 
 // Animation Variants
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -78,7 +81,30 @@ const cardVariants: Variants = {
   },
 };
 
-export default function CoursesSection() {
+interface Course {
+  _id: string;
+  title: string;
+  level: string;
+  duration: string;
+  description: string;
+  imageUrl?: string;
+}
+
+export default function CoursesSection({courses = []}: {courses: Course[]}) {
+const coursesArray = Array.isArray(courses) 
+    ? courses 
+    : courses?.data 
+      ? courses.data  // If you passed the whole sanityFetch response
+      : [];           // Fallback to empty array
+
+  // Now use 'coursesArray' instead of 'courses'
+  if (coursesArray.length === 0) {
+    return null;
+  }
+
+
+  
+  
   return (
     <section
       id="courses"
@@ -117,9 +143,9 @@ export default function CoursesSection() {
             viewport={{ once: false, margin: "-50px" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
-            {courses.map((course) => (
+            {coursesArray.map((course) => (
               <motion.div
-                key={course.id}
+                key={course._id}
                 variants={cardVariants}
                 whileHover={{ y: -10 }} // Smooth lift on hover
                 className="group cursor-pointer"
@@ -132,13 +158,19 @@ export default function CoursesSection() {
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.6, ease: "circOut" }}
                       className="w-full h-full"
-                    >
-                      <Image
-                        src={course.image}
-                        alt={course.title}
-                        fill
-                        className="object-cover"
-                      />
+                    >{course.imageUrl ? (
+    <Image
+      src={course.imageUrl}
+      alt={course.title || "Course Image"}
+      fill
+      className="object-cover"
+    />
+  ) : (
+    // Show a fallback color or icon if no image exists
+    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+      <span className="text-gray-400">No Image Available</span>
+    </div>
+  )}
                     </motion.div>
 
                     <div className="absolute top-4 right-4 z-10">
@@ -170,7 +202,7 @@ export default function CoursesSection() {
                     </p>
 
                     <div className="inline-flex items-center gap-2 text-black dark:text-white font-medium text-sm transition-all group-hover:gap-3">
-              <Link href={`/product/${course.id}`}>
+              <Link href={`/product/${course._id}`}>
                       
                       Learn More
                       </Link>

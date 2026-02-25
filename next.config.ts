@@ -1,23 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-  remotePatterns: [
-    {
-      protocol: "https",
-      hostname: "readdy.ai",
-    },
-     {
-      protocol: "https",
-      hostname: "images.unsplash.com",
-    },
-    {
-      protocol: "https",
-      hostname: "unsplash.com",
-    },
-  ],
-},
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**", // This allows any HTTPS website
+      },
+      {
+        protocol: "http",
+        hostname: "**", // This allows any HTTP website (less secure)
+      },
+    ],
+  },
 };
 
 export default nextConfig;

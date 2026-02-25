@@ -90,15 +90,9 @@ interface Course {
   imageUrl?: string;
 }
 
-export default function CoursesSection({courses = []}: {courses: Course[]}) {
-const coursesArray = Array.isArray(courses) 
-    ? courses 
-    : courses?.data 
-      ? courses.data  // If you passed the whole sanityFetch response
-      : [];           // Fallback to empty array
+export default function CoursesSection({ courses = []}: {courses: Course[]}) {
 
-  // Now use 'coursesArray' instead of 'courses'
-  if (coursesArray.length === 0) {
+  if (courses.length === 0) {
     return null;
   }
 
@@ -143,7 +137,7 @@ const coursesArray = Array.isArray(courses)
             viewport={{ once: false, margin: "-50px" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
-            {coursesArray.map((course) => (
+            {courses.map((course) => (
               <motion.div
                 key={course._id}
                 variants={cardVariants}

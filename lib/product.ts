@@ -21,5 +21,5 @@ export async function getProductData(_id: string) {
  const { data: courses = []} = await sanityFetch({ query: COURSES_QUERY });
  console.log(courses);
 
-  return courses.find((p) => p._id === _id);
+  return courses.find((p : any) => p._id === _id);
 }
